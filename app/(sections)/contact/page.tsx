@@ -1,6 +1,6 @@
+import ContactForm from "@/app/components/common/ContactForm";
 import Footer from "@/app/components/footer/Footer";
 import Header from "@/app/components/header/Header";
-import ContactForm from "@/app/components/common/ContactForm";
 import { getBreadcrumbSchema } from "@/app/lib/utils/schema";
 
 export const metadata = {
@@ -33,7 +33,7 @@ export default function ContactPage() {
 
       <Header />
 
-      <main className="flex-grow">
+      <main className="grow">
         {/* Hero */}
         <section className="py-16 md:py-24 bg-linear-to-br from-blue-50 to-teal-50 dark:from-[#1d1d1d] dark:to-[#2a2a2a]">
           <div className="container max-w-6xl mx-auto px-4">
@@ -41,7 +41,8 @@ export default function ContactPage() {
               Contact EggMpire
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300">
-              Questions about EGGS? Get in touch with our team or join our community channels.
+              Questions about EGGS? Get in touch with our team or join our
+              community channels.
             </p>
           </div>
         </section>
@@ -64,7 +65,9 @@ export default function ContactPage() {
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                     {contact.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400">{contact.content}</p>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {contact.content}
+                  </p>
                 </div>
               ))}
             </div>
@@ -79,3 +82,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

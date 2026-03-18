@@ -146,7 +146,7 @@ export default function Home() {
                         </div>
                         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                           <div
-                            className="bg-gradient-to-r from-primary to-secondary h-2 rounded-full"
+                            className="bg-linear-to-r from-primary to-secondary h-2 rounded-full"
                             style={{ width: `${item.percentage}%` }}
                           />
                         </div>
@@ -164,7 +164,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-primary to-secondary text-white">
+      <section className="py-16 md:py-24 bg-linear-to-r from-primary to-secondary text-white">
         <div className="container max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">
             Ready to Join the EggMpire?

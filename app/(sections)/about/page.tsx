@@ -28,7 +28,7 @@ export default function AboutPage() {
 
       <Header />
 
-      <main className="flex-grow">
+      <main className="grow">
         {/* Hero */}
         <section className="py-16 md:py-24 bg-linear-to-br from-blue-50 to-teal-50 dark:from-[#1d1d1d] dark:to-[#2a2a2a]">
           <div className="container max-w-6xl mx-auto px-4">
