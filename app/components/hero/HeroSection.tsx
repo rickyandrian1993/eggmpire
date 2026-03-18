@@ -1,0 +1,82 @@
+import Link from "next/link";
+import { AnimatedHeading, AnimatedButton, FadeIn, AnimatedCard } from "@/app/components/common/AnimatedComponents";
+
+export default function HeroSection() {
+  return (
+    <section className="min-h-[calc(100vh-80px)] flex items-center justify-center bg-linear-to-br from-blue-50 to-teal-50 dark:from-[#1d1d1d] dark:to-[#2a2a2a]">
+      <div className="container max-w-6xl mx-auto px-4 py-20 text-center">
+        <FadeIn direction="down" delay={0.1}>
+          <div className="mb-6 inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full">
+            <span className="text-primary dark:text-blue-400 font-semibold text-sm">
+              🚀 Next Generation DeFi Token
+            </span>
+          </div>
+        </FadeIn>
+
+        <AnimatedHeading delay={0.2}>
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+            Welcome to{" "}
+            <span className="text-primary dark:text-blue-400">EggMpire</span>
+          </h1>
+        </AnimatedHeading>
+
+        <FadeIn direction="up" delay={0.3}>
+          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+            A decentralized token ecosystem combining security, speed, and
+            community governance. Join thousands building the future of digital
+            finance.
+          </p>
+        </FadeIn>
+
+        <FadeIn direction="up" delay={0.4}>
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
+            <Link
+              href="/about"
+              className="px-8 py-3 bg-primary dark:bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
+            >
+              Learn More About EGGS
+            </Link>
+            <Link
+              href="/contact"
+              className="px-8 py-3 border-2 border-primary dark:border-blue-400 text-primary dark:text-blue-400 rounded-lg font-semibold hover:bg-primary hover:text-white dark:hover:bg-blue-400 dark:hover:text-slate-900 transition-colors"
+            >
+              Get Started
+            </Link>
+          </div>
+        </FadeIn>
+
+        {/* Quick Stats */}
+        <div className="grid md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-gray-300 dark:border-gray-700">
+          <AnimatedCard index={0} delay={0.5}>
+            <div>
+              <p className="text-4xl font-bold text-primary dark:text-blue-400 mb-2">
+                1B
+              </p>
+              <p className="text-gray-600 dark:text-gray-400">Total Supply</p>
+            </div>
+          </AnimatedCard>
+
+          <AnimatedCard index={1} delay={0.5}>
+            <div>
+              <p className="text-4xl font-bold text-primary dark:text-blue-400 mb-2">
+                400M
+              </p>
+              <p className="text-gray-600 dark:text-gray-400">Circulating</p>
+            </div>
+          </AnimatedCard>
+
+          <AnimatedCard index={2} delay={0.5}>
+            <div>
+              <p className="text-4xl font-bold text-primary dark:text-blue-400 mb-2">
+                18
+              </p>
+              <p className="text-gray-600 dark:text-gray-400">Token Decimals</p>
+            </div>
+          </AnimatedCard>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
