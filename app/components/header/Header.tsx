@@ -1,12 +1,24 @@
 "use client";
 
+import { cn } from "@/app/lib/utils/helpers";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../common/Button";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 10); // Trigger at 10px scroll
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const menuItems = [
     { label: "Home", href: "/" },
@@ -17,18 +29,23 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#1d1d1d]/80 backdrop-blur-md border-b border-gray-800">
+    <header
+      className={cn(
+        "sticky top-0 z-50 border-b transition-all duration-300",
+        !isScrolled && "bg-transparent border-transparent backdrop-blur-0",
+        isScrolled &&
+          "bg-linear-to-r from-[#1d1d1d]/80 to-[#1d1d1d]/70 border-white/10 backdrop-blur-xl shadow-lg shadow-black/20",
+      )}
+    >
       <div className="container max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <Image
-            src="/logo.svg"
-            alt="Eggmpire Logo"
-            width={120}
-            height={38}
-            priority
-          />
-        </Link>
+        <Image
+          src="/logo.svg"
+          alt="Eggmpire Logo"
+          width={120}
+          height={38}
+          priority
+        />
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-8">
@@ -44,7 +61,9 @@ export default function Header() {
         </nav>
 
         {/* Button */}
-        <Button variant="primary">Own EGGMPIRE</Button>
+        <Link href={"/"} className="hidden md:block">
+          <Button variant="primary">Own EGGMPIRE</Button>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button
@@ -61,12 +80,12 @@ export default function Header() {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <nav className="md:hidden border-t border-gray-800 bg-[#1d1d1d]">
-          <div className="container max-w-6xl mx-auto px-4 py-4 flex flex-col gap-4">
+          <div className="container max-w-6xl mx-auto px-4 py-4 flex flex-col items-center gap-4">
             {menuItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-300 hover:text-blue-400 font-medium transition-colors"
+                className="text-white hover:text-[#E8A921] font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}

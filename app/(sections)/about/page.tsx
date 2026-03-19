@@ -30,7 +30,7 @@ export default function AboutPage() {
 
       <main className="grow">
         {/* Hero */}
-        <section className="py-16 md:py-24 bg-linear-to-br from-[#1d1d1d] to-[#2a2a2a]">
+        <section className="py-16 md:py-24 bg-transparent">
           <div className="container max-w-6xl mx-auto px-4">
             <h1 className="text-5xl font-bold text-white mb-4">
               About EggMpire
@@ -43,7 +43,7 @@ export default function AboutPage() {
         </section>
 
         {/* Content */}
-        <section className="py-16 md:py-24 bg-[#1d1d1d]">
+        <section className="py-16 md:py-24 bg-transparent">
           <div className="container max-w-6xl mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 mb-16">
               <div>

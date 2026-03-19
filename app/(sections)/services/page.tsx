@@ -34,7 +34,7 @@ export default function TokenomicsPage() {
 
       <main className="grow">
         {/* Hero */}
-        <section className="py-16 md:py-24 bg-linear-to-br from-[#1d1d1d] to-[#2a2a2a]">
+        <section className="py-16 md:py-24 bg-[#1d1d1d]">
           <div className="container max-w-6xl mx-auto px-4">
             <h1 className="text-5xl font-bold text-white mb-4">Tokenomics</h1>
             <p className="text-xl text-gray-300">
@@ -45,7 +45,7 @@ export default function TokenomicsPage() {
         </section>
 
         {/* Token Overview */}
-        <section className="py-16 md:py-24 bg-[#1d1d1d]">
+        <section className="py-16 md:py-24 bg-transparent">
           <div className="container max-w-6xl mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 mb-16">
               {/* Key Metrics */}
@@ -122,7 +122,7 @@ export default function TokenomicsPage() {
         </section>
 
         {/* Features Grid */}
-        <section className="py-16 md:py-24 bg-[#2a2a2a]">
+        <section className="py-16 md:py-24 bg-transparent">
           <div className="container max-w-6xl mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -151,7 +151,7 @@ export default function TokenomicsPage() {
         </section>
 
         {/* Vesting Schedule */}
-        <section className="py-16 md:py-24 bg-[#1d1d1d]">
+        <section className="py-16 md:py-24 bg-transparent">
           <div className="container max-w-6xl mx-auto px-4">
             <h2 className="text-4xl font-bold text-white mb-12 text-center">
               Token Release Schedule

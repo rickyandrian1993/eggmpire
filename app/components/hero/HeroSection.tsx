@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="min-h-[calc(100vh-80px)] flex items-center justify-center bg-linear-to-br from-[#1d1d1d] to-[#2a2a2a]">
+    <section className="min-h-[calc(100vh-80px)] flex items-center justify-center bg-transparent">
       <div className="container max-w-6xl mx-auto px-4 py-20 text-center">
         <FadeIn direction="down" delay={0.1}>
           <div className="mb-6 inline-block px-4 py-2 bg-blue-900/30 rounded-full">

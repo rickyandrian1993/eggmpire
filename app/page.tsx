@@ -43,7 +43,21 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
-      <Divider>WHAT Is EggMpire Token (EGGM)</Divider>
+      <div className="space-y-4">
+        <Divider spacing="lg" size="4xl" mobileSize="lg">
+          WHAT Is EggMpire Token (EGGM)
+        </Divider>
+      </div>
+      <div className="space-y-4">
+        <Divider spacing="lg" size="4xl" mobileSize="lg">
+          EGGM TEAM
+        </Divider>
+      </div>
+      <div className="space-y-4">
+        <Divider spacing="lg" size="4xl" mobileSize="lg">
+          Contact Us
+        </Divider>
+      </div>
 
       {/* Token Features Section */}
       <section className="py-16 md:py-24">
@@ -162,7 +176,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-linear-to-r from-primary to-secondary text-white">
+      <section className="py-16 md:py-24 text-white">
         <div className="container max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">
             Ready to Join the EggMpire?

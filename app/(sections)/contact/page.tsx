@@ -35,7 +35,7 @@ export default function ContactPage() {
 
       <main className="grow">
         {/* Hero */}
-        <section className="py-16 md:py-24 bg-linear-to-br from-[#1d1d1d] to-[#2a2a2a]">
+        <section className="py-16 md:py-24 bg-transparent">
           <div className="container max-w-6xl mx-auto px-4">
             <h1 className="text-5xl font-bold text-white mb-4">
               Contact EggMpire
@@ -48,7 +48,7 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Content */}
-        <section className="py-16 md:py-24 bg-[#1d1d1d]">
+        <section className="py-16 md:py-24 bg-transparent">
           <div className="container max-w-6xl mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-12 mb-12">
               {[
