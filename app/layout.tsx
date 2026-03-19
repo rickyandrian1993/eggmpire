@@ -83,10 +83,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#1d1d1d" },
-  ],
+  themeColor: "#1d1d1d",
 };
 
 export default function RootLayout({
@@ -98,7 +95,7 @@ export default function RootLayout({
   const organizationSchema = getOrganizationSchema();
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

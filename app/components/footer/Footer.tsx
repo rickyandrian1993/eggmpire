@@ -33,15 +33,13 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-100 dark:bg-[#1d1d1d] border-t border-gray-200 dark:border-gray-800">
+    <footer className="bg-[#1d1d1d] border-t border-gray-800">
       <div className="container max-w-6xl mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-bold text-primary dark:text-blue-400 mb-3">
-              Eggmpire
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
+            <h3 className="text-xl font-bold text-blue-400 mb-3">Eggmpire</h3>
+            <p className="text-gray-400 text-sm">
               Delivering excellence in digital solutions and company services.
             </p>
           </div>
@@ -49,15 +47,13 @@ export default function Footer() {
           {/* Footer Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">
-                {section.title}
-              </h4>
+              <h4 className="font-semibold text-white mb-4">{section.title}</h4>
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 text-sm transition-colors"
+                      className="text-gray-400 hover:text-blue-400 text-sm transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -69,8 +65,8 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-200 dark:border-gray-800 pt-8">
-          <p className="text-center text-gray-600 dark:text-gray-400 text-sm">
+        <div className="border-t border-gray-800 pt-8">
+          <p className="text-center text-gray-400 text-sm">
             © {currentYear} Eggmpire. All rights reserved.
           </p>
         </div>

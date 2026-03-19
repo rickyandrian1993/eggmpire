@@ -34,12 +34,10 @@ export default function TokenomicsPage() {
 
       <main className="grow">
         {/* Hero */}
-        <section className="py-16 md:py-24 bg-linear-to-br from-blue-50 to-teal-50 dark:from-[#1d1d1d] dark:to-[#2a2a2a]">
+        <section className="py-16 md:py-24 bg-linear-to-br from-[#1d1d1d] to-[#2a2a2a]">
           <div className="container max-w-6xl mx-auto px-4">
-            <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Tokenomics
-            </h1>
-            <p className="text-xl text-gray-700 dark:text-gray-300">
+            <h1 className="text-5xl font-bold text-white mb-4">Tokenomics</h1>
+            <p className="text-xl text-gray-300">
               Transparent token distribution and economic model for sustainable
               growth
             </p>
@@ -47,47 +45,43 @@ export default function TokenomicsPage() {
         </section>
 
         {/* Token Overview */}
-        <section className="py-16 md:py-24 bg-white dark:bg-[#1d1d1d]">
+        <section className="py-16 md:py-24 bg-[#1d1d1d]">
           <div className="container max-w-6xl mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 mb-16">
               {/* Key Metrics */}
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+                <h2 className="text-3xl font-bold text-white mb-8">
                   Token Specifications
                 </h2>
                 <div className="space-y-6">
-                  <div className="p-6 bg-gray-50 dark:bg-[#2a2a2a] rounded-lg">
-                    <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">
+                  <div className="p-6 bg-[#2a2a2a] rounded-lg">
+                    <h3 className="text-sm font-semibold text-gray-400 mb-2">
                       Token Name
                     </h3>
-                    <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                      EggMpire
-                    </p>
+                    <p className="text-2xl font-bold text-white">EggMpire</p>
                   </div>
 
-                  <div className="p-6 bg-gray-50 dark:bg-[#2a2a2a] rounded-lg">
-                    <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">
+                  <div className="p-6 bg-[#2a2a2a] rounded-lg">
+                    <h3 className="text-sm font-semibold text-gray-400 mb-2">
                       Token Symbol
                     </h3>
-                    <p className="text-2xl font-bold text-primary dark:text-blue-400">
-                      EGGS
-                    </p>
+                    <p className="text-2xl font-bold text-blue-400">EGGS</p>
                   </div>
 
-                  <div className="p-6 bg-gray-50 dark:bg-[#2a2a2a] rounded-lg">
-                    <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">
+                  <div className="p-6 bg-[#2a2a2a] rounded-lg">
+                    <h3 className="text-sm font-semibold text-gray-400 mb-2">
                       Total Supply
                     </h3>
-                    <p className="text-2xl font-bold text-gray-900 dark:text-white">
+                    <p className="text-2xl font-bold text-white">
                       {TOKENOMICS.totalSupply}
                     </p>
                   </div>
 
-                  <div className="p-6 bg-gray-50 dark:bg-[#2a2a2a] rounded-lg">
-                    <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">
+                  <div className="p-6 bg-[#2a2a2a] rounded-lg">
+                    <h3 className="text-sm font-semibold text-gray-400 mb-2">
                       Decimals
                     </h3>
-                    <p className="text-2xl font-bold text-gray-900 dark:text-white">
+                    <p className="text-2xl font-bold text-white">
                       {TOKENOMICS.decimals}
                     </p>
                   </div>
@@ -96,27 +90,27 @@ export default function TokenomicsPage() {
 
               {/* Distribution Chart */}
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+                <h2 className="text-3xl font-bold text-white mb-8">
                   Supply Distribution
                 </h2>
                 <div className="space-y-4">
                   {TOKENOMICS.distribution.map((item) => (
                     <div key={item.category}>
                       <div className="flex justify-between mb-2">
-                        <span className="font-medium text-gray-900 dark:text-white">
+                        <span className="font-medium text-white">
                           {item.category}
                         </span>
-                        <span className="text-primary dark:text-blue-400 font-bold">
+                        <span className="text-blue-400 font-bold">
                           {item.percentage}%
                         </span>
                       </div>
-                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+                      <div className="w-full bg-gray-700 rounded-full h-3">
                         <div
                           className="bg-linear-to-r from-primary to-secondary h-3 rounded-full transition-all"
                           style={{ width: `${item.percentage}%` }}
                         />
                       </div>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                      <p className="text-sm text-gray-400 mt-1">
                         {item.amount} tokens
                       </p>
                     </div>
@@ -128,13 +122,13 @@ export default function TokenomicsPage() {
         </section>
 
         {/* Features Grid */}
-        <section className="py-16 md:py-24 bg-gray-50 dark:bg-[#2a2a2a]">
+        <section className="py-16 md:py-24 bg-[#2a2a2a]">
           <div className="container max-w-6xl mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-4xl font-bold text-white mb-4">
                 Token Features
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-400 max-w-2xl mx-auto">
                 Built-in features designed for efficiency and security
               </p>
             </div>
@@ -143,15 +137,13 @@ export default function TokenomicsPage() {
               {TOKEN_FEATURES.map((feature) => (
                 <div
                   key={feature.id}
-                  className="p-8 rounded-lg bg-white dark:bg-[#1d1d1d] border border-gray-200 dark:border-gray-800 hover:shadow-lg transition-all"
+                  className="p-8 rounded-lg bg-[#1d1d1d] border border-gray-800 hover:shadow-lg transition-all"
                 >
                   <div className="text-5xl mb-4">{feature.icon}</div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                  <h3 className="text-2xl font-bold text-white mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    {feature.description}
-                  </p>
+                  <p className="text-gray-400">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -159,9 +151,9 @@ export default function TokenomicsPage() {
         </section>
 
         {/* Vesting Schedule */}
-        <section className="py-16 md:py-24 bg-white dark:bg-[#1d1d1d]">
+        <section className="py-16 md:py-24 bg-[#1d1d1d]">
           <div className="container max-w-6xl mx-auto px-4">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+            <h2 className="text-4xl font-bold text-white mb-12 text-center">
               Token Release Schedule
             </h2>
 
@@ -185,15 +177,13 @@ export default function TokenomicsPage() {
               ].map((item) => (
                 <div
                   key={item.phase}
-                  className="p-8 rounded-lg border-2 border-primary dark:border-blue-400 text-center"
+                  className="p-8 rounded-lg border-2 border-blue-400 text-center"
                 >
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-2xl font-bold text-white mb-2">
                     {item.phase}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">
-                    {item.description}
-                  </p>
-                  <p className="text-4xl font-bold text-primary dark:text-blue-400">
+                  <p className="text-gray-400 mb-4">{item.description}</p>
+                  <p className="text-4xl font-bold text-blue-400">
                     {item.percentage}
                   </p>
                 </div>

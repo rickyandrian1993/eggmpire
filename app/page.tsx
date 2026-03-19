@@ -49,10 +49,10 @@ export default function Home() {
       <section className="py-16 md:py-24">
         <div className="container max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Why Choose EggMpire?
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               Discover the key features that make EggMpire the future of
               decentralized finance
             </p>
@@ -61,14 +61,12 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {TOKEN_FEATURES.map((feature, index) => (
               <AnimatedCard key={feature.id} index={index} delay={0.1}>
-                <div className="p-6 rounded-lg bg-gray-50 dark:bg-[#2a2a2a] hover:shadow-lg transition-shadow">
+                <div className="p-6 rounded-lg bg-[#2a2a2a] hover:shadow-lg transition-shadow">
                   <div className="text-4xl mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-xl font-bold text-white mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    {feature.description}
-                  </p>
+                  <p className="text-gray-400">{feature.description}</p>
                 </div>
               </AnimatedCard>
             ))}
@@ -80,10 +78,10 @@ export default function Home() {
       <section className="py-16 md:py-24">
         <div className="container max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Tokenomics
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               Transparent token distribution designed for long-term
               sustainability
             </p>
@@ -94,10 +92,10 @@ export default function Home() {
             <div className="space-y-6">
               <FadeIn direction="left" delay={0.1}>
                 <div className="p-6 rounded-lg">
-                  <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">
+                  <h3 className="text-sm font-semibold text-gray-400 mb-2">
                     Total Supply
                   </h3>
-                  <p className="text-3xl font-bold text-primary dark:text-blue-400">
+                  <p className="text-3xl font-bold text-blue-400">
                     {TOKENOMICS.totalSupply} EGGS
                   </p>
                 </div>
@@ -105,10 +103,10 @@ export default function Home() {
 
               <FadeIn direction="left" delay={0.2}>
                 <div className="p-6 rounded-lg">
-                  <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">
+                  <h3 className="text-sm font-semibold text-gray-400 mb-2">
                     Circulating Supply
                   </h3>
-                  <p className="text-3xl font-bold text-primary dark:text-blue-400">
+                  <p className="text-3xl font-bold text-blue-400">
                     {TOKENOMICS.circulatingSupply} EGGS
                   </p>
                 </div>
@@ -116,10 +114,10 @@ export default function Home() {
 
               <FadeIn direction="left" delay={0.3}>
                 <div className="p-6 rounded-lg">
-                  <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">
+                  <h3 className="text-sm font-semibold text-gray-400 mb-2">
                     Token Decimals
                   </h3>
-                  <p className="text-3xl font-bold text-primary dark:text-blue-400">
+                  <p className="text-3xl font-bold text-blue-400">
                     {TOKENOMICS.decimals}
                   </p>
                 </div>
@@ -129,7 +127,7 @@ export default function Home() {
             {/* Distribution */}
             <FadeIn direction="right" delay={0.2}>
               <div className="rounded-lg p-8">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                <h3 className="text-2xl font-bold text-white mb-6">
                   Supply Distribution
                 </h3>
                 <div className="space-y-4">
@@ -137,20 +135,20 @@ export default function Home() {
                     <AnimatedCard key={item.category} index={index} delay={0.1}>
                       <div>
                         <div className="flex justify-between mb-2">
-                          <span className="font-medium text-gray-900 dark:text-white">
+                          <span className="font-medium text-white">
                             {item.category}
                           </span>
-                          <span className="text-primary dark:text-blue-400 font-bold">
+                          <span className="text-blue-400 font-bold">
                             {item.percentage}%
                           </span>
                         </div>
-                        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                        <div className="w-full bg-gray-700 rounded-full h-2">
                           <div
                             className="bg-linear-to-r from-primary to-secondary h-2 rounded-full"
                             style={{ width: `${item.percentage}%` }}
                           />
                         </div>
-                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                        <p className="text-sm text-gray-400 mt-1">
                           {item.amount} tokens
                         </p>
                       </div>

@@ -63,33 +63,29 @@ export default function TeamPage() {
 
       <main className="grow">
         {/* Hero */}
-        <section className="py-16 md:py-24 bg-linear-to-br from-blue-50 to-teal-50 dark:from-[#1d1d1d] dark:to-[#2a2a2a]">
+        <section className="py-16 md:py-24 bg-linear-to-br from-[#1d1d1d] to-[#2a2a2a]">
           <div className="container max-w-6xl mx-auto px-4">
-            <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Our Team
-            </h1>
-            <p className="text-xl text-gray-700 dark:text-gray-300">
+            <h1 className="text-5xl font-bold text-white mb-4">Our Team</h1>
+            <p className="text-xl text-gray-300">
               Meet the blockchain experts and visionaries building EggMpire
             </p>
           </div>
         </section>
 
         {/* Team Grid */}
-        <section className="py-16 md:py-24 bg-white dark:bg-[#1d1d1d]">
+        <section className="py-16 md:py-24 bg-[#1d1d1d]">
           <div className="container max-w-6xl mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-8">
               {team.map((member) => (
                 <div
                   key={member.name}
-                  className="text-center p-6 rounded-lg bg-gray-50 dark:bg-[#2a2a2a] hover:shadow-lg transition-shadow"
+                  className="text-center p-6 rounded-lg bg-[#2a2a2a] hover:shadow-lg transition-shadow"
                 >
                   <div className="text-6xl mb-4">{member.image}</div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                  <h3 className="text-xl font-bold text-white mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-primary dark:text-blue-400 font-semibold">
-                    {member.role}
-                  </p>
+                  <p className="text-blue-400 font-semibold">{member.role}</p>
                 </div>
               ))}
             </div>

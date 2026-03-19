@@ -12,8 +12,8 @@ interface DividerProps {
 export default function Divider({
   children,
   className,
-  lineColor = "border-gray-300 dark:border-gray-700",
-  textColor = "text-gray-700 dark:text-gray-300",
+  lineColor = "border-gray-700",
+  textColor = "text-gray-300",
   spacing = "md",
 }: DividerProps) {
   const spacingClasses = {

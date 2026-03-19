@@ -15,15 +15,14 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "font-semibold rounded-lg transition-all duration-200 font-primary";
+    "font-semibold rounded-full transition-all duration-200 font-primary";
 
   const variants = {
     primary:
-      "bg-primary dark:bg-blue-500 text-white hover:bg-blue-700 dark:hover:bg-blue-600",
-    secondary:
-      "bg-secondary dark:bg-teal-500 text-white hover:bg-teal-700 dark:hover:bg-teal-600",
+      "bg-[#E8A921] text-[#323232] hover:bg-[#E8A921]/80 hover:text-white",
+    secondary: "bg-teal-500 text-white hover:bg-teal-600",
     outline:
-      "border-2 border-primary dark:border-blue-400 text-primary dark:text-blue-400 hover:bg-primary hover:text-white dark:hover:bg-blue-400 dark:hover:text-slate-900",
+      "border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900",
   };
 
   const sizes = {

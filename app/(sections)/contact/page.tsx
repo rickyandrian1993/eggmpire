@@ -35,12 +35,12 @@ export default function ContactPage() {
 
       <main className="grow">
         {/* Hero */}
-        <section className="py-16 md:py-24 bg-linear-to-br from-blue-50 to-teal-50 dark:from-[#1d1d1d] dark:to-[#2a2a2a]">
+        <section className="py-16 md:py-24 bg-linear-to-br from-[#1d1d1d] to-[#2a2a2a]">
           <div className="container max-w-6xl mx-auto px-4">
-            <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            <h1 className="text-5xl font-bold text-white mb-4">
               Contact EggMpire
             </h1>
-            <p className="text-xl text-gray-700 dark:text-gray-300">
+            <p className="text-xl text-gray-300">
               Questions about EGGS? Get in touch with our team or join our
               community channels.
             </p>
@@ -48,7 +48,7 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Content */}
-        <section className="py-16 md:py-24 bg-white dark:bg-[#1d1d1d]">
+        <section className="py-16 md:py-24 bg-[#1d1d1d]">
           <div className="container max-w-6xl mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-12 mb-12">
               {[
@@ -62,12 +62,10 @@ export default function ContactPage() {
               ].map((contact) => (
                 <div key={contact.title} className="text-center">
                   <div className="text-5xl mb-4">{contact.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-xl font-bold text-white mb-2">
                     {contact.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    {contact.content}
-                  </p>
+                  <p className="text-gray-400">{contact.content}</p>
                 </div>
               ))}
             </div>
