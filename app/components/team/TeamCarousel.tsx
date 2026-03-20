@@ -1,8 +1,6 @@
 "use client";
 
-import { motion, useAnimationControls } from "framer-motion";
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface TeamMember {
   id: number;
@@ -82,7 +80,7 @@ const teamMembers: TeamMember[] = [
 
 export default function TeamCarousel() {
   const doubledMembers = [...teamMembers, ...teamMembers];
-  
+
   return (
     <div className="w-full overflow-hidden py-12 bg-[#1d1d1d]/50 backdrop-blur-sm rounded-3xl border border-white/5 shadow-2xl">
       <div className="relative">
@@ -105,9 +103,12 @@ export default function TeamCarousel() {
               <div className="w-[240px] h-[240px] bg-white rounded-2xl overflow-hidden mb-6 flex items-center justify-center relative shadow-inner">
                 {/* Sementara belum ada asset */}
                 <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-300 flex items-center justify-center">
-                   <span className="text-4xl font-bold text-gray-400">
-                     {member.name.split(' ').map(n => n[0]).join('')}
-                   </span>
+                  <span className="text-4xl font-bold text-gray-400">
+                    {member.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")}
+                  </span>
                 </div>
                 {/* Kalau udah ada pakai yang ini
                 <Image
