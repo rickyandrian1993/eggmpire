@@ -25,7 +25,7 @@ export default function Header() {
     { label: "Privacy Rule", href: "/about" },
     { label: "Term & Conditions of Service", href: "/services" },
     { label: "Blog", href: "/team" },
-    { label: "Contact Us", href: "/contact" },
+    { label: "Contact Us", href: "#contact-us" },
   ];
 
   return (
