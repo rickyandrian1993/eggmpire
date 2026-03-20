@@ -62,7 +62,9 @@ export default function Header() {
 
         {/* Button */}
         <Link href={"/"} className="hidden md:block">
-          <Button variant="primary">Own EGGMPIRE</Button>
+          <Button variant="primary" glow>
+            Own EGGMPIRE
+          </Button>
         </Link>
 
         {/* Mobile Menu Button */}

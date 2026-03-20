@@ -34,10 +34,7 @@ export default function HeroSection() {
               transition={{ duration: 0.7 }}
               className="flex flex-col justify-center w-full"
             >
-              {/* <h1 className="text-4xl md:text-6xl font-bold text-yellow-400 mb-6">
-                Planet
-              </h1> */}
-              <h1 className="text-4xl md:text-6xl font-bold text-yellow-400 mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-[#E8A921] mb-6">
                 <RotatingText />
               </h1>
 
@@ -63,7 +60,7 @@ export default function HeroSection() {
               {/* INNER COLUMN */}
               <div className="flex flex-col items-start w-full max-w-sm">
                 {/* CTA */}
-                <Button size="lg" className="mb-6">
+                <Button size="lg" className="mb-6" glow>
                   Own EGGMPire
                 </Button>
 
@@ -79,31 +76,11 @@ export default function HeroSection() {
                     Standard: ERC-20 <br />
                     Contract: 0xfFBd1ac225268e94D352Ecb65Db881fd17B99EB4
                   </p>
-                  {/* <ul className="text-sm space-y-3">
-                    <li>
-                      <span> Name: Eggmpire</span>
-                      Token
-                    </li>
-                    <li>
-                      <span> Symbol: EGGM</span>
-                    </li>
-                    <li>
-                      <span> Network: Ethereum</span>
-                    </li>
-                    <li>
-                      <span> Standard: ERC-20</span>
-                    </li>
-                    <li className="break-all">
-                      <span>
-                        Contract: <br />
-                      </span>
-                      <span>0xfFBd1ac225268e94D352Ecb65Db881fd17B99EB4</span>
-                    </li>
-                  </ul> */}
                 </div>
               </div>
             </motion.div>
           </div>
+
           {/* TRUSTED BY - SEPARATE SECTION */}
           <CarouselTrusted />
         </div>
