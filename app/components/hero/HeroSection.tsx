@@ -4,6 +4,7 @@ import {
   FadeIn,
 } from "@/app/components/common/AnimatedComponents";
 import Link from "next/link";
+import Countdown from "./Countdown";
 
 export default function HeroSection() {
   return (
@@ -49,7 +50,7 @@ export default function HeroSection() {
         </FadeIn>
 
         {/* Quick Stats */}
-        <div className="grid md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-gray-700">
+        {/* <div className="grid md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-gray-700">
           <AnimatedCard index={0} delay={0.5}>
             <div>
               <p className="text-4xl font-bold text-blue-400 mb-2">1B</p>
@@ -70,7 +71,18 @@ export default function HeroSection() {
               <p className="text-gray-400">Token Decimals</p>
             </div>
           </AnimatedCard>
-        </div>
+        </div> */}
+        <FadeIn direction="up" delay={0.5}>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            ICO / ITO EggMpire Token (EGGM) until 8 August 2026
+          </p>
+          <div className="mb-12">
+            <Countdown />
+          </div>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Initial DEX Offering (IDO) will be started on 9 August 2026
+          </p>
+        </FadeIn>
       </div>
     </section>
   );
