@@ -1,3 +1,4 @@
+
 // Site Configuration - EggMpire Token
 export const SITE_CONFIG = {
   name: "EggMpire",
@@ -46,7 +47,8 @@ export const TOKEN_FEATURES = [
   {
     id: 2,
     title: "Secure",
-    description: "Audited smart contracts with enterprise-grade security measures",
+    description:
+      "Audited smart contracts with enterprise-grade security measures",
     icon: "🔒",
   },
   {
@@ -58,19 +60,22 @@ export const TOKEN_FEATURES = [
   {
     id: 4,
     title: "Fast Transactions",
-    description: "Lightning-fast blockchain transactions with confirmation speeds",
+    description:
+      "Lightning-fast blockchain transactions with confirmation speeds",
     icon: "⚡",
   },
   {
     id: 5,
     title: "Community Driven",
-    description: "Governed by the community with transparent governance mechanisms",
+    description:
+      "Governed by the community with transparent governance mechanisms",
     icon: "🤝",
   },
   {
     id: 6,
     title: "Multi-Chain",
-    description: "Available across multiple blockchain networks for accessibility",
+    description:
+      "Available across multiple blockchain networks for accessibility",
     icon: "🌐",
   },
 ];
@@ -118,5 +123,5 @@ export const SEO_KEYWORDS = {
     "blockchain developers",
     "crypto founders",
   ] as string[],
-}
+};
 

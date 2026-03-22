@@ -1,3 +1,5 @@
+export const targetTime = new Date("2026-08-08T00:00:00").getTime();
+
 export function getServerNow() {
   return Date.now();
 }

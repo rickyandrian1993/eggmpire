@@ -1,10 +1,11 @@
 "use client";
 
+import { getServerNow, targetTime } from "@/app/lib/time";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FadeIn } from "../common/AnimatedComponents";
 import Button from "../common/Button";
-import CountdownServer from "../countdown/CountdownServer";
+import CountdownClient from "../countdown/Countdown";
 import RotatingText from "../RotatingText";
 import CarouselTrusted from "./CarouselTrusted";
 
@@ -92,7 +93,7 @@ export default function HeroSection() {
           ICO / ITO EggMpire Token (EGGM) until 8 August 2026
         </p>
         <div className="mb-12">
-          <CountdownServer />
+          <CountdownClient targetTime={targetTime} serverNow={getServerNow()} />
         </div>
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
           Initial DEX Offering (IDO) will be started on 9 August 2026
