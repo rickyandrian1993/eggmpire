@@ -14,67 +14,67 @@ const teamMembers: TeamMember[] = [
     id: 1,
     name: "Retno Dewi Hendrastuti",
     role: "Director of PT Eggmpire Bumi Lestari",
-    image: "/team/member1.jpg",
+    image: "/teams/Retno.svg",
   },
   {
     id: 2,
     name: "Meutia Amanda",
     role: "Supervisor of Equator Bumi Lestari Foundation",
-    image: "/team/member2.jpg",
+    image: "/teams/Meutia.svg",
   },
   {
     id: 3,
     name: "Julius Robinson",
     role: "Chairman of Equator Bumi Lestari Foundation",
-    image: "/team/member3.jpg",
+    image: "/teams/Julius.svg",
   },
   {
     id: 4,
     name: "Randy Rinaldy Setyawan",
     role: "Chief Supervisor of Equator Bumi Lestari Foundation",
-    image: "/team/member4.jpg",
+    image: "/teams/Randy.svg",
   },
   {
     id: 5,
     name: "Mayor Jendral Purnawirawan A. Ary Karyono S.H, M.Si.",
     role: "Supervisor of Equator Bumi Lestari Foundation",
-    image: "/team/member5.jpg",
+    image: "/teams/Mayor.svg",
   },
   {
     id: 6,
     name: "Riko Kurniawan",
     role: "Supervisor of Equator Bumi Lestari Foundation",
-    image: "/team/member6.jpg",
+    image: "/teams/Riko.svg",
   },
   {
     id: 7,
     name: "Dr. Prayoto",
     role: "Supervisor of Equator Bumi Lestari Foundation",
-    image: "/team/member7.jpg",
+    image: "/teams/Prayoto.svg",
   },
   {
     id: 8,
     name: "Ir. Aris Kabul Pranoto, M.Si",
     role: "Supervisor of Equator Bumi Lestari Foundation",
-    image: "/team/member8.jpg",
+    image: "/teams/Aris.svg",
   },
   {
     id: 9,
     name: "Raymond Mickey Hernawan",
     role: "Finance of Equator Bumi Lestari Foundation",
-    image: "/team/member9.jpg",
+    image: "/teams/Raymond.svg",
   },
   {
     id: 10,
     name: "Maxi Franky",
     role: "Secretary of Equator Bumi Lestari Foundation",
-    image: "/team/member10.jpg",
+    image: "/teams/Maxi.svg",
   },
   {
     id: 11,
     name: "Joko Soemitro",
     role: "CEO PT Solusi Semesta Berjaya",
-    image: "/team/member11.jpg",
+    image: "/teams/Joko.svg",
   },
 ];
 
@@ -87,10 +87,10 @@ export default function TeamCarousel() {
         <motion.div
           className="flex gap-6 px-6"
           animate={{
-            x: [0, -1 * (280 + 24) * teamMembers.length],
+            x: [0, -1 * (240 + 24) * teamMembers.length],
           }}
           transition={{
-            duration: 11,
+            duration: 31,
             ease: "linear",
             repeat: Infinity,
           }}
@@ -98,26 +98,14 @@ export default function TeamCarousel() {
           {doubledMembers.map((member, index) => (
             <div
               key={`${member.id}-${index}`}
-              className="flex-shrink-0 w-[280px] flex flex-col items-center"
+              className="flex-shrink-0 w-[240px] flex flex-col items-center"
             >
-              <div className="w-[240px] h-[240px] bg-white rounded-2xl overflow-hidden mb-6 flex items-center justify-center relative shadow-inner">
-                {/* Sementara belum ada asset */}
-                <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-300 flex items-center justify-center">
-                  <span className="text-4xl font-bold text-gray-400">
-                    {member.name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")}
-                  </span>
-                </div>
-                {/* Kalau udah ada pakai yang ini
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className="object-cover"
+              <div className="w-[240px] h-[300px] bg-white rounded-2xl overflow-hidden mb-6 flex items-center justify-center relative shadow-inner">
+                <img
+                  src={`../images/${member.image}`}
+                  alt="Research Image"
+                  className="w-full h-full object-contain"
                 />
-                */}
               </div>
 
               <div className="text-center px-2">
