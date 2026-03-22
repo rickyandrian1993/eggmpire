@@ -6,6 +6,7 @@ import HeroSection from "@/app/components/hero/HeroSection";
 import TeamCarousel from "@/app/components/team/TeamCarousel";
 import { getBreadcrumbSchema } from "@/app/lib/utils/schema";
 import Divider from "./components/common/Divider";
+import Button from "@/app/components/common/Button";
 
 export const metadata = {
   title: "EggMpire - Decentralized Token & DeFi Ecosystem | Home",
@@ -129,6 +130,17 @@ export default function Home() {
               </div>
             </FadeIn>
           </div>
+
+
+        </div>
+
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+          <Button size="lg" glow>
+            Download<br/>EGGMPIRE Whitepaper
+          </Button>
+          <Button size="lg" glow>
+            The Etherium<br/>Smart Contracts
+          </Button>
         </div>
       </div>
       <div className="space-y-4 container max-w-6xl mx-auto px-4">
