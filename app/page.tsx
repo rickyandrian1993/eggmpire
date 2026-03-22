@@ -1,4 +1,5 @@
 import { FadeIn } from "@/app/components/common/AnimatedComponents";
+import Button from "@/app/components/common/Button";
 import ContactUs from "@/app/components/common/ContactUs";
 import Footer from "@/app/components/footer/Footer";
 import Header from "@/app/components/header/Header";
@@ -7,7 +8,6 @@ import TeamCarousel from "@/app/components/team/TeamCarousel";
 import { getBreadcrumbSchema } from "@/app/lib/utils/schema";
 import Image from "next/image";
 import Divider from "./components/common/Divider";
-import Button from "@/app/components/common/Button";
 
 export const metadata = {
   title: "EggMpire - Decentralized Token & DeFi Ecosystem | Home",
@@ -67,19 +67,18 @@ export default function Home() {
           {/* The Problem */}
           <div className="sticky top-28 md:top-32 z-10 mb-12">
             <FadeIn direction="up" delay={0.2}>
-              <div className="bg-[#3C3C3C] rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row items-center gap-10">
-                <div className="w-full md:w-1/2 aspect-square relative rounded-3xl overflow-hidden shadow-xl">
+              <div className="bg-[#3C3C3C] rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row items-stretch gap-10 min-h-125">
+                <div className="w-full md:w-1/2 aspect-4/3 relative rounded-3xl overflow-hidden shadow-xl">
                   <div className="w-full h-full bg-linear-to-br from-yellow-500/20 to-orange-900/40 flex items-center justify-center border border-white/10">
                     {/* Placeholder for Problem Image */}
-                    <span className="text-white/20 text-lg font-bold">
+                    <div className="relative w-full h-full">
                       <Image
-                        width={40}
-                        height={40}
+                        fill
                         src="/images/theproblem.svg"
                         alt="Research Image"
-                        className="w-full h-full object-cover"
+                        className="object-cover"
                       />
-                    </span>
+                    </div>
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 space-y-6">
@@ -101,7 +100,7 @@ export default function Home() {
           <div className="relative z-20">
             <FadeIn direction="up" delay={0.3}>
               <div className="bg-[#585858] rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row items-center gap-10">
-                <div className="w-full md:w-1/2 aspect-square relative rounded-3xl overflow-hidden shadow-xl">
+                <div className="w-full md:w-1/2 aspect-4/3 relative rounded-3xl overflow-hidden shadow-xl">
                   <div className="w-full h-full bg-linear-to-br from-blue-500/20 to-indigo-900/40 flex items-center justify-center border border-white/10">
                     {/* Placeholder for Research Image */}
                     <span className="text-white/20 text-lg font-bold">
@@ -134,16 +133,18 @@ export default function Home() {
               </div>
             </FadeIn>
           </div>
-
-
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-12">
           <Button size="lg" glow>
-            Download<br/>EGGMPIRE Whitepaper
+            Download
+            <br />
+            EGGMPIRE Whitepaper
           </Button>
           <Button size="lg" glow>
-            The Etherium<br/>Smart Contracts
+            The Etherium
+            <br />
+            Smart Contracts
           </Button>
         </div>
       </div>
