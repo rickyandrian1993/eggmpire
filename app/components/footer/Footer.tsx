@@ -6,10 +6,8 @@ import Button from "../common/Button";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full px-6 md:px-20 py-20 text-white">
+    <footer className="relative w-full px-6 md:px-40 py-8 text-white">
       {/* BACKGROUND GLOW */}
-      {/* <div className="absolute inset-0 bg-[#323232]/60 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-[0_0_40px_rgba(0,0,0,0.3)] before:absolute before:inset-0 before:rounded-3xl before:bg-white/5 before:opacity-10 rounded-t-4xl" /> */}
-      {/* <div className="absolute inset-0 backdrop-blur-xl rounded-t-4xl" /> */}
       <div className="absolute inset-0 bg-[#323232]/75 backdrop-blur-xl rounded-t-4xl" />
 
       {/* CONTENT */}
@@ -27,7 +25,7 @@ export default function Footer() {
                 src="/images/verticalLogo.svg"
                 alt="Eggmpire Logo"
                 fill
-                className="object-contain drop-shadow-[0_0_10px_rgba(255,200,0,0.6)]"
+                className="object-contain"
               />
             </div>
           </div>
