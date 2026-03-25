@@ -1,5 +1,6 @@
 "use client";
 
+import { NAV_LINKS } from "@/app/lib/constants/config";
 import { cn } from "@/app/lib/utils/helpers";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,14 +20,6 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const menuItems = [
-    { label: "Home", href: "/" },
-    { label: "Privacy Rule", href: "/about" },
-    { label: "Term & Conditions", href: "/services" },
-    { label: "Blog", href: "/team" },
-    { label: "Contact Us", href: "#contact-us" },
-  ];
 
   return (
     <header
@@ -49,7 +42,7 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-8">
-          {menuItems.map((item) => (
+          {NAV_LINKS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -83,7 +76,7 @@ export default function Header() {
       {isMenuOpen && (
         <nav className="md:hidden border-t border-gray-800 bg-[#1d1d1d]">
           <div className="container max-w-6xl mx-auto px-4 py-4 flex flex-col items-center gap-4">
-            {menuItems.map((item) => (
+            {NAV_LINKS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
