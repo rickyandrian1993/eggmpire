@@ -3,8 +3,10 @@ import { motion } from "framer-motion";
 export default function CarouselTrusted() {
   return (
     <div className="w-full px-6 md:px-12 lg:px-24 mb-6 md:mb-12">
-      <p className="text-xs md:text-sm font-medium mb-4 text-white/60 text-center md:text-left">Trusted By</p>
-      <div className="w-full overflow-hidden rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 py-4 md:py-6">
+      <p className="text-xs md:text-sm font-medium mb-4 text-white/60 text-center md:text-left">
+        Trusted By
+      </p>
+      <div className="w-full overflow-hidden rounded-2xl md:rounded-3xl py-4 md:py-6">
         <div className="relative w-full">
           <motion.div
             className="flex gap-4 md:gap-8 px-4 md:px-6"

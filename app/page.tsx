@@ -8,7 +8,7 @@ import Description from "./components/description/Description";
 import Team from "./components/team/Team";
 
 export const metadata = {
-  title: "EggMpire - Decentralized Token & DeFi Ecosystem | Home",
+  title: "Home - EggMpire Token (EGGM)",
   description:
     "EggMpire (EGGS) is a decentralized blockchain token offering secure, fast, and community-driven DeFi solutions. Join our ecosystem today.",
   keywords: [

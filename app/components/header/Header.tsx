@@ -27,20 +27,49 @@ export default function Header() {
         "sticky top-0 z-50 border-b transition-all duration-300",
         !isScrolled && "bg-transparent border-transparent backdrop-blur-0",
         isScrolled &&
-        "bg-linear-to-r from-[#1d1d1d]/80 to-[#1d1d1d]/70 border-white/10 backdrop-blur-xl shadow-lg shadow-black/20",
+          "bg-linear-to-r from-[#1d1d1d]/80 to-[#1d1d1d]/70 border-white/10 backdrop-blur-xl shadow-lg shadow-black/20",
       )}
     >
       <div className="container max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <Image
-          src="/logo.svg"
-          alt="Eggmpire Logo"
-          width={120}
-          height={38}
-          priority
-        />
+        {/* LEFT (Mobile: Burger | Desktop: Logo) */}
+        <div className="flex items-center gap-3">
+          {/* Burger (Mobile only) */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden flex flex-col gap-1.5 p-2"
+            aria-label="Toggle menu"
+          >
+            <span
+              className={cn(
+                "block w-6 h-0.5 bg-gray-300 transition-all duration-300",
+                isMenuOpen && "rotate-45 translate-y-2",
+              )}
+            />
+            <span
+              className={cn(
+                "block w-6 h-0.5 bg-gray-300 transition-all duration-300",
+                isMenuOpen && "opacity-0",
+              )}
+            />
+            <span
+              className={cn(
+                "block w-6 h-0.5 bg-gray-300 transition-all duration-300",
+                isMenuOpen && "-rotate-45 -translate-y-2",
+              )}
+            />
+          </button>
 
-        {/* Desktop Menu */}
+          {/* Logo */}
+          <Image
+            src="/logo.svg"
+            alt="Eggmpire Logo"
+            width={120}
+            height={38}
+            priority
+          />
+        </div>
+
+        {/* CENTER (Desktop Nav only) */}
         <nav className="hidden md:flex gap-8">
           {NAV_LINKS.map((item) => (
             <Link
@@ -53,38 +82,18 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Button */}
-        <Link href={"/"} className="hidden md:block">
-          <Button variant="primary" glow>
-            Own EGGMPIRE
-          </Button>
-        </Link>
-
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          aria-label="Toggle menu"
-        >
-          <span
-            className={cn(
-              "block w-6 h-0.5 bg-gray-300 transition-all duration-300",
-              isMenuOpen && "rotate-45 translate-y-2"
-            )}
-          />
-          <span
-            className={cn(
-              "block w-6 h-0.5 bg-gray-300 transition-all duration-300",
-              isMenuOpen && "opacity-0"
-            )}
-          />
-          <span
-            className={cn(
-              "block w-6 h-0.5 bg-gray-300 transition-all duration-300",
-              isMenuOpen && "-rotate-45 -translate-y-2"
-            )}
-          />
-        </button>
+        {/* RIGHT (Button always right) */}
+        <div className="flex items-center">
+          <Link href={"/"}>
+            <Button
+              variant="primary"
+              glow
+              className="text-sm md:text-base px-3 md:px-5 py-2"
+            >
+              Own EGGMPIRE
+            </Button>
+          </Link>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -101,11 +110,6 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <Link href={"/"} onClick={() => setIsMenuOpen(false)}>
-              <Button variant="primary" glow>
-                Own EGGMPIRE
-              </Button>
-            </Link>
           </div>
         </nav>
       )}

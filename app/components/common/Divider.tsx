@@ -32,7 +32,6 @@ export default function Divider({
     "5xl": "text-5xl",
   };
 
-  // Auto-scale down for mobile if mobileSize is not provided
   const responsiveSizeMap = {
     xs: "text-xs md:text-xs",
     sm: "text-xs md:text-sm",
@@ -46,48 +45,50 @@ export default function Divider({
   };
 
   const spacingClasses = {
-    sm: "px-6 py-2",
-    md: "px-12 py-3",
-    lg: "px-20 py-4",
+    sm: "px-4 py-1.5 sm:px-6 sm:py-2",
+    md: "px-6 py-2 sm:px-12 sm:py-3",
+    lg: "px-8 py-2.5 sm:px-20 sm:py-4",
   };
 
-  // Use mobileSize if provided, otherwise use responsive auto-scaling
   const textSizeClass = mobileSize
-    ? mobileSize
-      ? sizeClasses[mobileSize]
-      : sizeClasses[size]
-    : responsiveSizeMap[size as keyof typeof responsiveSizeMap];
+    ? sizeClasses[mobileSize]
+    : responsiveSizeMap[size];
 
   const desktopSizeClass = mobileSize ? `md:${sizeClasses[size]}` : "";
 
   return (
-    <div className="flex justify-center w-full py-11">
+    <div className="flex justify-center w-full py-8 sm:py-11">
       <div
         className={cn(
-          "flex items-center gap-2 md:gap-4 w-full max-w-2xl md:max-w-7xl mx-auto px-2 md:px-6",
+          "flex items-center w-full max-w-2xl md:max-w-7xl mx-auto px-3 sm:px-6",
           className,
         )}
       >
-        {/* Left Line */}
-        <div className={cn("flex-1 border-t-2", lineColor)} />
+        {/* ❌ Hidden on mobile */}
+        <div className={cn("hidden sm:block flex-1 border-t-2", lineColor)} />
 
-        {/* Center Text */}
+        {/* ✅ Text */}
         {children && (
           <div
             className={cn(
-              "font-semibold whitespace-nowrap",
+              "font-semibold text-center",
               textColor,
               textSizeClass,
               desktopSizeClass,
               spacingClasses[spacing],
+
+              // ✅ Mobile behavior
+              "max-w-full sm:max-w-fit",
+              "wrap-break-words sm:whitespace-nowrap",
+              "mx-auto",
             )}
           >
             {children}
           </div>
         )}
 
-        {/* Right Line */}
-        <div className={cn("flex-1 border-t-2", lineColor)} />
+        {/* ✅ Always visible right line */}
+        <div className={cn("flex-1 border-t-2 ml-3 sm:ml-4", lineColor)} />
       </div>
     </div>
   );

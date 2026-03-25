@@ -61,12 +61,16 @@ export default function HeroSection() {
               {/* INNER COLUMN */}
               <div className="flex flex-col items-center md:items-start w-full max-w-sm">
                 {/* CTA */}
-                <Button size="lg" className="mb-8 md:mb-6 w-full md:w-auto" glow>
+                <Button
+                  size="lg"
+                  className="mb-8 md:mb-6 w-full md:w-auto"
+                  glow
+                >
                   Own EGGMPire
                 </Button>
 
                 {/* CARD */}
-                <div className="w-full rounded-2xl bg-white/5 md:bg-transparent p-6 md:p-0 backdrop-blur-sm md:backdrop-blur-0 border border-white/10 md:border-0">
+                <div className="w-full rounded-2xl p-6 md:p-0">
                   <h3 className="text-base md:text-lg font-semibold mb-4 text-center md:text-left">
                     Token Information:
                   </h3>
@@ -90,7 +94,11 @@ export default function HeroSection() {
       </div>
 
       {/* ✅ KEEP THIS INSIDE SECTION */}
-      <FadeIn direction="up" delay={0.5} className="w-full text-center py-12 px-4">
+      <FadeIn
+        direction="up"
+        delay={0.5}
+        className="w-full text-center py-12 px-4"
+      >
         <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
           ICO / ITO EggMpire Token (EGGM) until 8 August 2026
         </p>
