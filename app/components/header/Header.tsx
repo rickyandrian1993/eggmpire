@@ -1,5 +1,6 @@
 "use client";
 
+import { NAV_LINKS } from "@/app/lib/constants/config";
 import { cn } from "@/app/lib/utils/helpers";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,21 +21,13 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const menuItems = [
-    { label: "Home", href: "/" },
-    { label: "Privacy Rule", href: "/about" },
-    { label: "Term & Conditions", href: "/services" },
-    { label: "Blog", href: "/team" },
-    { label: "Contact Us", href: "#contact-us" },
-  ];
-
   return (
     <header
       className={cn(
         "sticky top-0 z-50 border-b transition-all duration-300",
         !isScrolled && "bg-transparent border-transparent backdrop-blur-0",
         isScrolled &&
-          "bg-linear-to-r from-[#1d1d1d]/80 to-[#1d1d1d]/70 border-white/10 backdrop-blur-xl shadow-lg shadow-black/20",
+        "bg-linear-to-r from-[#1d1d1d]/80 to-[#1d1d1d]/70 border-white/10 backdrop-blur-xl shadow-lg shadow-black/20",
       )}
     >
       <div className="container max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -49,7 +42,7 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-8">
-          {menuItems.map((item) => (
+          {NAV_LINKS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -96,9 +89,9 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-[71px] z-50 bg-[#1d1d1dbf] backdrop-blur-xl">
-          <nav className="flex flex-col items-center gap-8 pt-20">
-            {menuItems.map((item) => (
+        <nav className="md:hidden border-t border-gray-800 bg-[#1d1d1d]">
+          <div className="container max-w-6xl mx-auto px-4 py-4 flex flex-col items-center gap-4">
+            {NAV_LINKS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -113,8 +106,8 @@ export default function Header() {
                 Own EGGMPIRE
               </Button>
             </Link>
-          </nav>
-        </div>
+          </div>
+        </nav>
       )}
     </header>
   );
