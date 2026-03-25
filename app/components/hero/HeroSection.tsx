@@ -12,7 +12,7 @@ import CarouselTrusted from "./CarouselTrusted";
 export default function HeroSection() {
   return (
     <>
-      <div className="relative w-full rounded-[28px] overflow-hidden min-h-[500px] md:min-h-160 lg:min-h-170 flex items-center">
+      <div className="relative w-full rounded-[28px] overflow-hidden min-h-125 md:min-h-160 lg:min-h-170 flex items-center">
         {/* Background Image */}
         <Image
           src="/images/hero.svg"
