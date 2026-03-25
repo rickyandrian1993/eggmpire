@@ -31,7 +31,7 @@ export const NAV_LINKS = [
   { label: "Privacy Rule", href: "/privacy-rules" },
   { label: "Term & Conditions", href: "/terms" },
   // { label: "Blog", href: "/team" },
-  { label: "Contact Us", href: "#contact-us" },
+  { label: "Contact Us", href: "/#contact-us" },
 ];
 
 // SEO Keywords
