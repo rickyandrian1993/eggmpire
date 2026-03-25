@@ -61,7 +61,7 @@ export default function Divider({
   const desktopSizeClass = mobileSize ? `md:${sizeClasses[size]}` : "";
 
   return (
-    <div className="flex justify-center w-full">
+    <div className="flex justify-center w-full py-11">
       <div
         className={cn(
           "flex items-center gap-2 md:gap-4 w-full max-w-2xl md:max-w-7xl mx-auto px-2 md:px-6",
@@ -92,4 +92,3 @@ export default function Divider({
     </div>
   );
 }
-

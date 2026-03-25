@@ -5,6 +5,7 @@ import {
 } from "@/app/lib/utils/schema";
 import type { Metadata, Viewport } from "next";
 import { Lexend } from "next/font/google";
+import PageWrapper from "./components/PageWrapper";
 import "./globals.css";
 
 const fontSans = Lexend({
@@ -141,7 +142,9 @@ export default function RootLayout({
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
       </head>
-      <body className={`${fontSans.variable} antialiased`}>{children}</body>
+      <body className={`${fontSans.variable} antialiased`}>
+        <PageWrapper>{children}</PageWrapper>
+      </body>
     </html>
   );
 }
