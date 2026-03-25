@@ -23,7 +23,7 @@ export default function Header() {
   const menuItems = [
     { label: "Home", href: "/" },
     { label: "Privacy Rule", href: "/about" },
-    { label: "Term & Conditions of Service", href: "/services" },
+    { label: "Term & Conditions", href: "/services" },
     { label: "Blog", href: "/team" },
     { label: "Contact Us", href: "#contact-us" },
   ];
@@ -99,4 +99,3 @@ export default function Header() {
     </header>
   );
 }
-

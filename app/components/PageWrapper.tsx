@@ -12,8 +12,8 @@ export default function PageWrapper({
 
   useEffect(() => {
     const handleLoad = () => {
-      // small delay = smoother UX (important!)
-      setTimeout(() => setLoading(false), 400);
+      // small delay = smoother UX
+      setTimeout(() => setLoading(false), 300);
     };
 
     if (document.readyState === "complete") {
@@ -27,19 +27,21 @@ export default function PageWrapper({
 
   return (
     <>
-      {/* Loader */}
+      {/* Loader Overlay */}
       <div
         className={`
-          fixed inset-0 z-9999 transition-opacity duration-700
+          fixed inset-0 z-9999
+          transition-opacity duration-700 ease-out
           ${loading ? "opacity-100" : "opacity-0 pointer-events-none"}
         `}
       >
         <PageLoader />
       </div>
 
-      {/* Content */}
+      {/* Page Content */}
       <div
         className={`
+          min-h-screen
           transition-all duration-700 ease-out
           ${loading ? "opacity-0 scale-[0.98]" : "opacity-100 scale-100"}
         `}
