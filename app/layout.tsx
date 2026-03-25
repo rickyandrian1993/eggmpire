@@ -102,7 +102,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#1e40af" />
 
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
 
@@ -145,4 +145,3 @@ export default function RootLayout({
     </html>
   );
 }
-

@@ -6,7 +6,7 @@ import Button from "../common/Button";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full px-6 md:px-40 py-8 text-white">
+    <footer className="relative w-full px-6 md:px-20 py-8 text-white">
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 bg-[#323232]/75 backdrop-blur-xl rounded-t-4xl" />
 
@@ -18,23 +18,21 @@ export default function Footer() {
         className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14"
       >
         {/* LEFT - BRAND */}
-        <div className="flex flex-col gap-5">
-          <div className="flex items-center gap-4">
-            <div className="relative w-42 h-42">
-              <Image
-                src="/images/verticalLogo.svg"
-                alt="Eggmpire Logo"
-                fill
-                className="object-contain"
-              />
-            </div>
+        <div className="flex flex-col gap-2">
+          <div className="relative w-42 h-42">
+            <Image
+              src="/images/verticalLogo.svg"
+              alt="Eggmpire Logo"
+              fill
+              className="object-contain"
+            />
           </div>
 
           <h3 className="text-3xl font-semibold text-white">
             Planet • People • Profit
           </h3>
 
-          <p className="text-sm text-white leading-relaxed max-w-sm">
+          <p className="text-sm text-white leading-relaxed max-w-sm m-0">
             Planet = Sustainability of Environment <br />
             People = Social Economy <br />
             Profit = Prosperity is key to Sustainability
@@ -83,4 +81,3 @@ export default function Footer() {
     </footer>
   );
 }
-

@@ -67,9 +67,9 @@ export default function Home() {
           {/* The Problem */}
           <div className="sticky top-28 md:top-32 z-10 mb-12">
             <FadeIn direction="up" delay={0.2}>
-              <div className="bg-[#3C3C3C] rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row items-stretch gap-10 min-h-125">
+              <div className="bg-[#3C3C3C] rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row items-stretch gap-10">
                 <div className="w-full md:w-1/2 aspect-4/3 relative rounded-3xl overflow-hidden shadow-xl">
-                  <div className="w-full h-full bg-linear-to-br from-yellow-500/20 to-orange-900/40 flex items-center justify-center border border-white/10">
+                  <div className="w-full h-full flex items-center justify-center">
                     {/* Placeholder for Problem Image */}
                     <div className="relative w-full h-full">
                       <Image
@@ -82,10 +82,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 space-y-6">
-                  <h2 className="text-4xl md:text-5xl font-bold text-white">
-                    The Problem
-                  </h2>
-                  <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+                  <h2 className="font-bold text-white">The Problem</h2>
+                  <p className="text-gray-300 leading-relaxed">
                     Traditional egg farming faces high costs and environmental
                     impact from resource-intensive feed, making sustainable eggs
                     expensive and inaccessible. The supply chain often lacks
@@ -99,29 +97,28 @@ export default function Home() {
           {/* Research and Innovation */}
           <div className="relative z-20">
             <FadeIn direction="up" delay={0.3}>
-              <div className="bg-[#585858] rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row items-center gap-10">
+              <div className="bg-[#585858] rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row items-stretch gap-10">
                 <div className="w-full md:w-1/2 aspect-4/3 relative rounded-3xl overflow-hidden shadow-xl">
-                  <div className="w-full h-full bg-linear-to-br from-blue-500/20 to-indigo-900/40 flex items-center justify-center border border-white/10">
-                    {/* Placeholder for Research Image */}
-                    <span className="text-white/20 text-lg font-bold">
+                  <div className="w-full h-full flex items-center justify-center">
+                    <div className="relative w-full h-full">
                       <Image
                         fill
                         src="/images/researchandinnovation.svg"
                         alt="Research Image"
-                        className="w-full h-full object-cover"
+                        className="object-cover"
                       />
-                    </span>
+                    </div>
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 space-y-6">
-                  <h2 className="text-4xl md:text-5xl font-bold text-white">
+                  <h2 className="font-bold text-white">
                     Research and Innovation
                   </h2>
                   <div className="space-y-4">
                     <p className="text-lg font-bold text-white uppercase tracking-wider">
                       OUR EGGCOLOGIC Bio Conversion Eggs Farm is THE SOLUTION:
                     </p>
-                    <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed">
                       A scalable and sustainable eggs production model with a
                       self-sufficient ecosystem that provides over 70% of the
                       chicken’s diet internally. This reduces costs and our
@@ -136,12 +133,12 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-12">
-          <Button size="lg" glow>
+          <Button size="lg" className="w-[18rem]" glow>
             Download
             <br />
             EGGMPIRE Whitepaper
           </Button>
-          <Button size="lg" glow>
+          <Button size="lg" className="w-[18rem]" glow>
             The Etherium
             <br />
             Smart Contracts
