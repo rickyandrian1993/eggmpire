@@ -41,40 +41,40 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="w-full max-w-400 mx-auto px-4 sm:px-8 md:px-28 flex flex-col gap-10 items-center min-h-screen"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10 items-center min-h-screen"
       >
         <HeroSection />
       </section>
 
       {/* Description */}
-      <Divider spacing="lg" size="4xl" mobileSize="lg">
+      <Divider spacing="lg" size="4xl" mobileSize="2xl">
         WHAT Is EggMpire Token (EGGM)
       </Divider>
       <section
         id="description"
-        className="w-full max-w-400 mx-auto px-4 sm:px-8 md:px-28"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         <Description />
       </section>
 
       {/* Team Section */}
-      <Divider spacing="lg" size="4xl" mobileSize="lg">
+      <Divider spacing="lg" size="4xl" mobileSize="2xl">
         EGGM TEAM
       </Divider>
       <section
         id="team"
-        className="w-full max-w-400 mx-auto px-4 sm:px-8 md:px-28"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         <Team />
       </section>
 
       {/* Contact Us */}
-      <Divider spacing="lg" size="4xl" mobileSize="lg">
+      <Divider spacing="lg" size="4xl" mobileSize="2xl">
         Contact Us
       </Divider>
       <section
         id="contact-us"
-        className="w-full max-w-400 mx-auto px-4 sm:px-8 md:px-28 pb-12"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12"
       >
         <ContactUs />
       </section>

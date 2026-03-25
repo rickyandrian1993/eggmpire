@@ -27,7 +27,7 @@ export default function Header() {
         "sticky top-0 z-50 border-b transition-all duration-300",
         !isScrolled && "bg-transparent border-transparent backdrop-blur-0",
         isScrolled &&
-          "bg-linear-to-r from-[#1d1d1d]/80 to-[#1d1d1d]/70 border-white/10 backdrop-blur-xl shadow-lg shadow-black/20",
+        "bg-linear-to-r from-[#1d1d1d]/80 to-[#1d1d1d]/70 border-white/10 backdrop-blur-xl shadow-lg shadow-black/20",
       )}
     >
       <div className="container max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -63,12 +63,27 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden flex flex-col gap-1.5"
+          className="md:hidden flex flex-col gap-1.5 p-2"
           aria-label="Toggle menu"
         >
-          <span className="block w-6 h-0.5 bg-gray-300 transition-all" />
-          <span className="block w-6 h-0.5 bg-gray-300 transition-all" />
-          <span className="block w-6 h-0.5 bg-gray-300 transition-all" />
+          <span
+            className={cn(
+              "block w-6 h-0.5 bg-gray-300 transition-all duration-300",
+              isMenuOpen && "rotate-45 translate-y-2"
+            )}
+          />
+          <span
+            className={cn(
+              "block w-6 h-0.5 bg-gray-300 transition-all duration-300",
+              isMenuOpen && "opacity-0"
+            )}
+          />
+          <span
+            className={cn(
+              "block w-6 h-0.5 bg-gray-300 transition-all duration-300",
+              isMenuOpen && "-rotate-45 -translate-y-2"
+            )}
+          />
         </button>
       </div>
 
@@ -80,12 +95,17 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-white hover:text-[#E8A921] font-medium transition-colors"
+                className="text-2xl text-white hover:text-[#E8A921] font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
+            <Link href={"/"} onClick={() => setIsMenuOpen(false)}>
+              <Button variant="primary" glow>
+                Own EGGMPIRE
+              </Button>
+            </Link>
           </div>
         </nav>
       )}
