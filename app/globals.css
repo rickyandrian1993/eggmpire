@@ -74,7 +74,7 @@ body::before {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  filter: brightness(0.1) blur(1px);
+  filter: brightness(0.4) blur(1px);
   backdrop-filter: blur(2px);
   opacity: 0.85;
   pointer-events: none;

@@ -28,23 +28,27 @@ export default function CountdownClient({
   targetTime: number;
   serverNow: number;
 }) {
-  const [offset] = useState(() => serverNow - Date.now());
-
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(() =>
-    calculateTimeLeft(targetTime, serverNow),
-  );
+  const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      const now = Date.now() + offset; // 👈 synced time
-      setTimeLeft(calculateTimeLeft(targetTime, now));
-    }, 1000);
+    const offset = serverNow - Date.now();
 
+    const update = () => {
+      const now = Date.now() + offset;
+      setTimeLeft(calculateTimeLeft(targetTime, now));
+    };
+
+    update();
+
+    const interval = setInterval(update, 1000);
     return () => clearInterval(interval);
-  }, [targetTime, offset]);
+  }, [targetTime, serverNow]);
+
+  // 👇 prevent hydration mismatch WITHOUT mounted state
+  if (!timeLeft) return null;
 
   return (
-    <div className="inline-flex items-center px-6 py-4 bg-black/60 backdrop-blur-xl rounded-full border border-white/10">
+    <div className="inline-flex items-center px-6 py-4  bg-[#323232]/50 backdrop-blur-xl rounded-full border border-white/10">
       <div className="flex items-center gap-4 md:gap-8">
         <TimeUnit value={timeLeft.days} label="Day(s)" />
         <Separator />

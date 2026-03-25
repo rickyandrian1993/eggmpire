@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FadeIn } from "../common/AnimatedComponents";
 import Button from "../common/Button";
-import CountdownClient from "../countdown/Countdown";
+import Countdown from "../countdown/Countdown";
 import RotatingText from "../RotatingText";
 import CarouselTrusted from "./CarouselTrusted";
 
 export default function HeroSection() {
   return (
-    <section className="w-full max-w-400 mx-auto px-4 sm:px-8 md:px-28 pt-16 md:pt-20 flex flex-col gap-10 items-center min-h-screen">
+    <section className="w-full max-w-400 mx-auto px-4 sm:px-8 md:px-28 flex flex-col gap-10 items-center min-h-screen">
       <div className="relative w-full rounded-[28px] overflow-hidden min-h-160 md:min-h-170 flex items-center">
         {/* Background Image */}
         <Image
@@ -88,12 +88,12 @@ export default function HeroSection() {
       </div>
 
       {/* ✅ KEEP THIS INSIDE SECTION */}
-      <FadeIn direction="up" delay={0.5}>
+      <FadeIn direction="up" delay={0.5} className="w-full text-center">
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
           ICO / ITO EggMpire Token (EGGM) until 8 August 2026
         </p>
-        <div className="mb-12">
-          <CountdownClient targetTime={targetTime} serverNow={getServerNow()} />
+        <div className="mb-2">
+          <Countdown targetTime={targetTime} serverNow={getServerNow()} />
         </div>
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
           Initial DEX Offering (IDO) will be started on 9 August 2026
