@@ -12,41 +12,41 @@ import CarouselTrusted from "./CarouselTrusted";
 export default function HeroSection() {
   return (
     <>
-      <div className="relative w-full rounded-[28px] overflow-hidden min-h-160 md:min-h-170 flex items-center">
+      <div className="relative w-full rounded-[28px] overflow-hidden min-h-[500px] md:min-h-160 lg:min-h-170 flex items-center">
         {/* Background Image */}
         <Image
           src="/images/hero.svg"
           alt="Egg background"
           fill
           priority
-          className="object-cover object-[center_top] scale-110"
+          className="object-cover object-top md:object-[center_top] scale-110"
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-[#323232]/75" />
+        <div className="absolute inset-0 bg-[#323232]/75 md:bg-[#323232]/75" />
 
         {/* Content */}
-        <div className="relative z-10 w-full flex flex-col h-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 p-8 pb-4 md:p-24 md:pb-4 text-white flex-1">
+        <div className="relative z-10 w-full flex flex-col h-full py-12 md:py-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0 p-6 md:p-12 lg:p-24 text-white flex-1">
             {/* LEFT - 50% */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              className="flex flex-col justify-center w-full"
+              className="flex flex-col justify-center w-full text-center md:text-left"
             >
-              <h1 className="text-4xl md:text-6xl font-bold text-[#E8A921] mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#E8A921] mb-4 md:mb-6">
                 <RotatingText />
               </h1>
 
-              <p className="text-sm md:text-base leading-relaxed max-w-md mb-6">
+              <p className="text-sm md:text-base leading-relaxed max-w-md mx-auto md:mx-0 mb-4 md:mb-6">
                 EggMpire Token (EGGM) is a 3P Token: <br />
                 Planet = Sustainability of Environment <br />
                 People = Social Economy <br />
                 Profit = Prosperity is key to Sustainability
               </p>
 
-              <p className="text-sm mb-10">
+              <p className="text-xs md:text-sm mb-6 md:mb-10 opacity-80">
                 Tokenizing Sustainable Eggs Production Through Blockchain.
               </p>
             </motion.div>
@@ -59,23 +59,25 @@ export default function HeroSection() {
               className="flex justify-center md:justify-end w-full"
             >
               {/* INNER COLUMN */}
-              <div className="flex flex-col items-start w-full max-w-sm">
+              <div className="flex flex-col items-center md:items-start w-full max-w-sm">
                 {/* CTA */}
-                <Button size="lg" className="mb-6" glow>
+                <Button size="lg" className="mb-8 md:mb-6 w-full md:w-auto" glow>
                   Own EGGMPire
                 </Button>
 
                 {/* CARD */}
-                <div className="w-full rounded-2xl">
-                  <h3 className="text-lg font-semibold mb-4">
+                <div className="w-full rounded-2xl bg-white/5 md:bg-transparent p-6 md:p-0 backdrop-blur-sm md:backdrop-blur-0 border border-white/10 md:border-0">
+                  <h3 className="text-base md:text-lg font-semibold mb-4 text-center md:text-left">
                     Token Information:
                   </h3>
-                  <p className="text-sm md:text-base leading-relaxed max-w-md mb-6">
+                  <p className="text-xs md:text-sm lg:text-base leading-relaxed max-w-md text-center md:text-left opacity-90">
                     Name: Eggmpire Token <br />
                     Symbol: EGGM <br />
                     Network: Ethereum <br />
                     Standard: ERC-20 <br />
-                    Contract: 0xfFBd1ac225268e94D352Ecb65Db881fd17B99EB4
+                    <span className="break-all">
+                      Contract: 0xfFBd1ac225268e94D352Ecb65Db881fd17B99EB4
+                    </span>
                   </p>
                 </div>
               </div>
@@ -88,14 +90,14 @@ export default function HeroSection() {
       </div>
 
       {/* ✅ KEEP THIS INSIDE SECTION */}
-      <FadeIn direction="up" delay={0.5} className="w-full text-center">
-        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+      <FadeIn direction="up" delay={0.5} className="w-full text-center py-12 px-4">
+        <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
           ICO / ITO EggMpire Token (EGGM) until 8 August 2026
         </p>
-        <div className="mb-2">
+        <div className="mb-4 md:mb-2">
           <Countdown targetTime={targetTime} serverNow={getServerNow()} />
         </div>
-        <p className="text-xl md:text-2xl max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-tight">
           Initial DEX Offering (IDO) will be started on 9 August 2026
         </p>
       </FadeIn>

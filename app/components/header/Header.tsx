@@ -70,31 +70,51 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden flex flex-col gap-1.5"
+          className="md:hidden flex flex-col gap-1.5 p-2"
           aria-label="Toggle menu"
         >
-          <span className="block w-6 h-0.5 bg-gray-300 transition-all" />
-          <span className="block w-6 h-0.5 bg-gray-300 transition-all" />
-          <span className="block w-6 h-0.5 bg-gray-300 transition-all" />
+          <span
+            className={cn(
+              "block w-6 h-0.5 bg-gray-300 transition-all duration-300",
+              isMenuOpen && "rotate-45 translate-y-2"
+            )}
+          />
+          <span
+            className={cn(
+              "block w-6 h-0.5 bg-gray-300 transition-all duration-300",
+              isMenuOpen && "opacity-0"
+            )}
+          />
+          <span
+            className={cn(
+              "block w-6 h-0.5 bg-gray-300 transition-all duration-300",
+              isMenuOpen && "-rotate-45 -translate-y-2"
+            )}
+          />
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <nav className="md:hidden border-t border-gray-800 bg-[#1d1d1d]">
-          <div className="container max-w-6xl mx-auto px-4 py-4 flex flex-col items-center gap-4">
+        <div className="md:hidden fixed inset-0 top-[71px] z-50 bg-[#1d1d1dbf] backdrop-blur-xl">
+          <nav className="flex flex-col items-center gap-8 pt-20">
             {menuItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-white hover:text-[#E8A921] font-medium transition-colors"
+                className="text-2xl text-white hover:text-[#E8A921] font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
-          </div>
-        </nav>
+            <Link href={"/"} onClick={() => setIsMenuOpen(false)}>
+              <Button variant="primary" glow>
+                Own EGGMPIRE
+              </Button>
+            </Link>
+          </nav>
+        </div>
       )}
     </header>
   );

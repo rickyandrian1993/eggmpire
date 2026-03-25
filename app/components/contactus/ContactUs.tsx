@@ -34,16 +34,16 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="bg-[#2a2a2a]/60 backdrop-blur-xl rounded-[28px] p-6 md:p-12 shadow-2xl">
-      <h2 className="text-2xl md:text-4xl font-bold text-white mb-10 md:mb-12">
+    <div className="bg-[#2a2a2a]/60 backdrop-blur-xl rounded-[28px] p-6 md:p-12 shadow-2xl w-full">
+      <h2 className="text-2xl md:text-4xl font-bold text-white mb-8 md:mb-12">
         Get In Touch With Us
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
         {/* LEFT: FORM */}
         <form
           id="contact-form"
-          className="space-y-6 md:space-y-8"
+          className="space-y-6 md:space-y-8 order-1"
           onSubmit={submitForm}
         >
           <FloatingInput id="name" name="name" label="Name" />
@@ -57,35 +57,34 @@ export default function ContactUs() {
         </form>
 
         {/* RIGHT: INFO + BUTTON */}
-        <div className="flex flex-col justify-between h-full items-start">
+        <div className="flex flex-col justify-between h-full items-start order-2">
           {/* Contact Info */}
-          {/* Contact Info */}
-          <div className="space-y-6 md:space-y-8">
+          <div className="space-y-6 md:space-y-8 w-full">
             {/* Email */}
-            <div className="flex items-center gap-4 text-white group cursor-pointer">
+            <div className="flex items-center gap-4 text-white group cursor-pointer hover:opacity-80 transition-opacity">
               <ContactIcon src="/icons/email.svg" alt="email" />
-              <span className="text-base md:text-lg">admin@eggmpire.com</span>
+              <span className="text-sm sm:text-base md:text-lg truncate">admin@eggmpire.com</span>
             </div>
 
             {/* Phone */}
-            <div className="flex items-center gap-4 text-white group cursor-pointer">
+            <div className="flex items-center gap-4 text-white group cursor-pointer hover:opacity-80 transition-opacity">
               <ContactIcon src="/icons/phone.svg" alt="phone" />
-              <span className="text-base md:text-lg">+62 811 2140807</span>
+              <span className="text-sm sm:text-base md:text-lg">+62 811 2140807</span>
             </div>
 
             {/* Telegram */}
-            <div className="flex items-center gap-4 text-white group cursor-pointer">
+            <div className="flex items-center gap-4 text-white group cursor-pointer hover:opacity-80 transition-opacity">
               <ContactIcon src="/icons/telegram.svg" alt="telegram" />
-              <span className="text-base md:text-lg">+62 811 2140807</span>
+              <span className="text-sm sm:text-base md:text-lg">+62 811 2140807</span>
             </div>
           </div>
 
           {/* BUTTON */}
-          <div className="mt-8 md:mt-10 w-full">
+          <div className="mt-10 md:mt-12 w-full">
             <button
               type="submit"
               form="contact-form"
-              className="w-full md:w-auto px-8 md:px-10 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors shadow-lg"
+              className="w-full md:w-auto px-10 py-4 md:py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-all shadow-lg active:scale-95"
             >
               Submit
             </button>
