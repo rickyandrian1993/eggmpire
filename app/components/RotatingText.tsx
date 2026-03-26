@@ -17,7 +17,7 @@ export default function RotatingText() {
   }, []);
 
   return (
-    <div className="h-[1.2em] overflow-hidden">
+    <div className="h-[1.2em] justify-items-center md:justify-items-normal overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}

@@ -9,7 +9,7 @@ export default function DonwloadButton() {
         EGGMPIRE Whitepaper
       </Button>
       <Button size="lg" className="w-[18rem]" glow>
-        The Etherium
+        The Ethereum
         <br />
         Smart Contracts
       </Button>

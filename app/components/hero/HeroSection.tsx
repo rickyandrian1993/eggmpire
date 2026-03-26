@@ -1,29 +1,30 @@
 "use client";
 
-import { useState } from "react";
 import { getServerNow, targetTime } from "@/app/lib/time";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 import { FadeIn } from "../common/AnimatedComponents";
 import Button from "../common/Button";
+import SwapModal from "../common/SwapModal";
 import Countdown from "../countdown/Countdown";
 import RotatingText from "../RotatingText";
 import CarouselTrusted from "./CarouselTrusted";
-import SwapModal from "../common/SwapModal";
 
 export default function HeroSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
-      <div className="relative w-full rounded-[28px] overflow-hidden min-h-[500px] md:min-h-160 lg:min-h-170 flex items-center">
+      <div className="relative w-full rounded-[28px] overflow-hidden min-h-125 md:min-h-160 lg:min-h-170 flex items-center">
         {/* Background Image */}
         <Image
           src="/images/hero.svg"
           alt="Egg background"
           fill
           priority
-          className="object-cover object-top md:object-[center_top] scale-110"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover object-[center_top] md:object-center"
         />
 
         {/* Overlay */}
@@ -65,9 +66,9 @@ export default function HeroSection() {
               {/* INNER COLUMN */}
               <div className="flex flex-col items-center md:items-start w-full max-w-sm">
                 {/* CTA */}
-                <Button 
-                  size="lg" 
-                  className="mb-8 md:mb-6 w-full md:w-auto" 
+                <Button
+                  size="lg"
+                  className="mb-8 md:mb-6 w-full md:w-auto"
                   glow
                   onClick={() => setIsModalOpen(true)}
                 >
@@ -85,7 +86,9 @@ export default function HeroSection() {
                     Network: Ethereum <br />
                     Standard: ERC-20 <br />
                     <span className="break-all">
-                      Contract: 0xfFBd1ac225268e94D352Ecb65Db881fd17B99EB4
+                      Contract:
+                      <br />
+                      0xfFBd1ac225268e94D352Ecb65Db881fd17B99EB4
                     </span>
                   </p>
                 </div>
