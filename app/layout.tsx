@@ -5,6 +5,7 @@ import {
 } from "@/app/lib/utils/schema";
 import type { Metadata, Viewport } from "next";
 import { Lexend } from "next/font/google";
+import Background from "./components/Background";
 import PageWrapper from "./components/PageWrapper";
 import "./globals.css";
 
@@ -143,6 +144,7 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
       </head>
       <body className={`${fontSans.variable} antialiased`}>
+        <Background />
         <PageWrapper>{children}</PageWrapper>
       </body>
     </html>
