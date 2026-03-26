@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { getServerNow, targetTime } from "@/app/lib/time";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -8,11 +9,14 @@ import Button from "../common/Button";
 import Countdown from "../countdown/Countdown";
 import RotatingText from "../RotatingText";
 import CarouselTrusted from "./CarouselTrusted";
+import SwapModal from "../common/SwapModal";
 
 export default function HeroSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <>
-      <div className="relative w-full rounded-[28px] overflow-hidden min-h-125 md:min-h-160 lg:min-h-170 flex items-center">
+      <div className="relative w-full rounded-[28px] overflow-hidden min-h-[500px] md:min-h-160 lg:min-h-170 flex items-center">
         {/* Background Image */}
         <Image
           src="/images/hero.svg"
@@ -61,10 +65,11 @@ export default function HeroSection() {
               {/* INNER COLUMN */}
               <div className="flex flex-col items-center md:items-start w-full max-w-sm">
                 {/* CTA */}
-                <Button
-                  size="lg"
-                  className="mb-8 md:mb-6 w-full md:w-auto"
+                <Button 
+                  size="lg" 
+                  className="mb-8 md:mb-6 w-full md:w-auto" 
                   glow
+                  onClick={() => setIsModalOpen(true)}
                 >
                   Own EGGMPire
                 </Button>
@@ -93,7 +98,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* ✅ KEEP THIS INSIDE SECTION */}
       <FadeIn
         direction="up"
         delay={0.5}
@@ -109,6 +113,8 @@ export default function HeroSection() {
           Initial DEX Offering (IDO) will be started on 9 August 2026
         </p>
       </FadeIn>
+
+      <SwapModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   );
 }

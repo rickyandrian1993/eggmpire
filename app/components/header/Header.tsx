@@ -6,10 +6,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Button from "../common/Button";
+import SwapModal from "../common/SwapModal";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +29,7 @@ export default function Header() {
         "sticky top-0 z-50 border-b transition-all duration-300",
         !isScrolled && "bg-transparent border-transparent backdrop-blur-0",
         isScrolled &&
-          "bg-linear-to-r from-[#1d1d1d]/80 to-[#1d1d1d]/70 border-white/10 backdrop-blur-xl shadow-lg shadow-black/20",
+        "bg-linear-to-r from-[#1d1d1d]/80 to-[#1d1d1d]/70 border-white/10 backdrop-blur-xl shadow-lg shadow-black/20",
       )}
     >
       <div className="container max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -89,6 +91,7 @@ export default function Header() {
               variant="primary"
               glow
               className="text-sm md:text-base px-3 md:px-5 py-2"
+              onClick={() => setIsModalOpen(true)}
             >
               Own EGGMPIRE
             </Button>
@@ -113,6 +116,7 @@ export default function Header() {
           </div>
         </nav>
       )}
+      <SwapModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </header>
   );
 }
