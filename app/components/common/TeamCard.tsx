@@ -4,7 +4,6 @@ import { TeamMember } from "@/app/lib/constants/team";
 import Image from "next/image";
 
 export default function TeamCard({ name, role, image, focusY }: TeamMember) {
-  console.log("name", name);
   return (
     <div className="shrink-0 w-40 sm:w-48 md:w-60 flex flex-col items-center">
       {/* Image */}
