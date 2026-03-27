@@ -11,13 +11,13 @@ export default function RotatingText() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % words.length);
-    }, 1500); // 👈 pause duration (adjust here)
+    }, 1500);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="h-[1.2em] justify-items-center md:justify-items-normal overflow-hidden">
+    <div className="h-[1.2em] w-full overflow-hidden flex justify-center md:justify-start">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
@@ -25,10 +25,10 @@ export default function RotatingText() {
           animate={{ y: "0%", opacity: 1 }}
           exit={{ y: "-100%", opacity: 0 }}
           transition={{
-            duration: 0.4, // 👈 scroll speed
+            duration: 0.4,
             ease: "easeOut",
           }}
-          className="h-[1.2em] flex items-center"
+          className="h-[1.2em] flex items-center justify-center md:justify-start"
         >
           {words[index]}
         </motion.div>
