@@ -6,7 +6,7 @@ import Button from "../common/Button";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full px-6 md:px-12 lg:px-20 py-12 md:py-16 text-white overflow-hidden">
+    <footer className="relative w-full px-6 md:px-12 lg:px-20 py-8 text-white overflow-hidden">
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 bg-[#323232]/75 backdrop-blur-xl rounded-t-[2.5rem] md:rounded-t-[4rem]" />
 
@@ -42,7 +42,9 @@ export default function Footer() {
 
         {/* MIDDLE - LINKS */}
         <div className="sm:justify-self-center lg:justify-self-end text-center sm:text-left">
-          <p className="text-xs md:text-sm text-gray-500 mb-6 uppercase tracking-widest font-bold">• Quick Links</p>
+          <p className="text-xs md:text-sm text-gray-500 mb-6 uppercase tracking-widest font-bold">
+            • Quick Link
+          </p>
 
           <ul className="space-y-4 text-sm md:text-base">
             {[
@@ -52,7 +54,10 @@ export default function Footer() {
               "Blog",
               "Contact Us",
             ].map((item, i) => (
-              <li key={i} className="group w-fit mx-auto sm:mx-0 cursor-pointer">
+              <li
+                key={i}
+                className="group w-fit mx-auto sm:mx-0 cursor-pointer"
+              >
                 <span className="relative text-gray-400 group-hover:text-white transition-colors duration-300">
                   {item}
                   <span className="absolute left-0 -bottom-1 w-0 h-px bg-[#E8A921] transition-all duration-300 group-hover:w-full"></span>
@@ -64,7 +69,9 @@ export default function Footer() {
 
         {/* RIGHT - SOCIAL */}
         <div className="sm:col-span-2 lg:col-span-1 sm:justify-self-center lg:justify-self-end text-center lg:text-left mt-8 lg:mt-0">
-          <p className="text-xs md:text-sm text-gray-500 mb-6 uppercase tracking-widest font-bold">• Connect With Us</p>
+          <p className="text-xs md:text-sm text-gray-500 mb-6 uppercase tracking-widest font-bold">
+            • socials
+          </p>
 
           <div className="flex gap-4 justify-center lg:justify-start">
             {[
@@ -72,15 +79,17 @@ export default function Footer() {
               { src: "/icons/ig.svg", alt: "Instagram" },
               { src: "/icons/tt.svg", alt: "TikTok" },
             ].map((item, i) => (
-              <Button key={i} variant="icon" size="icon" glow className="bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+              <Button
+                key={i}
+                variant="icon"
+                size="icon"
+                glow
+                className="transition-all"
+              >
                 <Image src={item.src} alt={item.alt} width={20} height={20} />
               </Button>
             ))}
           </div>
-
-          <p className="text-[10px] md:text-xs text-gray-500 mt-12 md:mt-24">
-            © {new Date().getFullYear()} PT EggMpire Bumi Lestari. All rights reserved.
-          </p>
         </div>
       </motion.div>
     </footer>

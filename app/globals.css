@@ -40,10 +40,19 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+  /* Prevents iOS Safari rubber-band scroll from exposing white area */
+  overscroll-behavior: none;
+}
+
+/* Fixes -webkit-fill-available for older iOS */
 html {
   scroll-behavior: smooth;
   height: 100%;
   width: 100%;
+  min-height: -webkit-fill-available;
 }
 
 body {
